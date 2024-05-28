@@ -1,0 +1,456 @@
+@font-face {
+    font-family: 'twcen';
+    src: url('/font/twcen.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'manier_medium';
+    src: url('/font/Manier-Regular-Trial-BF650bbeaf2fb28.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'manier_bold';
+    src: url('/font/Manier-Bold-Trial-BF650bbeaf09214.otf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Chonburi&family=DM+Serif+Display:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fontcolor: #fff;
+    --fontcolor2: #8F8F8F;
+}
+
+html,
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: #191919;
+    margin-left: 35px;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    width: 33.3%;
+    padding: 15px;
+    overflow: visible;
+    margin-right: 80px;
+}
+
+.fa-arrow-left {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #0a0a0a;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 360px;
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.appearance {
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.4s ease;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.appearance:hover {
+    background-size: 120%;
+}
+
+.appearance:nth-child(1) {
+    background-image: url(/images/etka1.png);
+    transition: 0.4s ease;
+}
+
+.appearance:nth-child(2) {
+    background-image: url(/images/etka2.png);
+    transition: 0.4s ease;
+
+}
+
+.appearance:nth-child(3) {
+    background-image: url(/images/etka3.png);
+    transition: 0.4s ease;
+
+}
+
+#section-5 .row:nth-child(2) {
+    gap: 50px;
+}
+
+
+
+#section-5 p {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.scroll-sections {
+    white-space: nowrap;
+    display: flex;
+    height: 100%;
+    overflow: visible;
+    transition-duration: 0.5s;
+}
+
+#section-1 .column {
+    gap: 13px;
+}
+
+#section-5 {
+    background-color: #F75110;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    background-color: #191919;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0;
+    border-right: 1px solid #444;
+}
+
+header .menu-item {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'twcen';
+    text-decoration: none;
+    /* harfler arası boşluk */
+    letter-spacing: 1px;
+    background-color: #191919;
+    border-radius: 360px;
+    padding: 10px;
+    transition: 0.6s ease;
+}
+
+header .menu-item:hover {
+    background-color: #080808;
+    cursor: pointer;
+}
+
+header h1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'twcen';
+    text-decoration: none;
+    margin-top: 50px;
+
+}
+
+.myname {
+    font-family: 'Arvo', serif;
+    color: var(--fontcolor);
+    font-size: 5rem;
+}
+
+#section-3 {
+    width: auto;
+}
+
+#section-2 {
+    width: auto;
+    padding-right: 80px;
+}
+
+#section-5 {
+    width: auto;
+    padding-right: 110px;
+}
+
+#section-6 {
+    padding-right: 110px;
+}
+
+#section-2 {
+    background-image: url(/images/bg2.gif);
+    background-size: 165%;
+    background-position: center;
+    background-position-y: 250px;
+    background-repeat: no-repeat;
+}
+
+
+#section-3 .column {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.line-vertical {
+    width: 2px;
+    height: 100px;
+    background-color: var(--fontcolor2);
+    margin: 10px 15px;
+}
+
+
+
+.code-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.coding {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.coding .time {
+    font-size: 1rem;
+    font-family: 'twcen';
+    color: var(--fontcolor2);
+}
+
+.coding .infocoding {
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.coding h5 {
+    font-size: 1.5rem;
+    font-family: 'twcen';
+    color: var(--fontcolor2);
+}
+
+.coding p {
+    font-family: 'twcen';
+
+}
+
+.column {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    margin: 10px 0px;
+
+}
+
+.skill h5 {
+    font-size: 3.5rem;
+    font-family: 'twcen';
+    height: 60px;
+    color: var(--fontcolor2);
+}
+
+.skill p {
+    font-family: 'twcen';
+
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+#section-5 .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-5 h1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: white;
+    text-align: center;
+    font-family: 'twcen';
+    text-decoration: none;
+    font-size: 9rem;
+    width: 100%;
+
+}
+
+#section-5 img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+#section-5 .row {
+    display: flex;
+}
+
+
+#section-5 .project {
+    width: 100%;
+    flex-direction: column;
+}
+
+#section-5 .column2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    height: 100%;
+    text-decoration: none;
+    transition: 0.7s ease;
+    margin-right: 40px;
+
+}
+
+#section-5 .column2:hover {
+    transform: scale(1.06);
+}
+
+#section-6 {
+    padding-right: 50px;
+}
+
+
+#section-5 .title {
+    width: 100%;
+    text-align: left;
+    font-size: 4rem;
+    font-family: 'manier_bold';
+    color: black;
+}
+
+#section-6 a {
+    padding: 10px;
+    text-decoration: none;
+    background-color: #131313;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+#section-6 a i {
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-6 .row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+#section-6 .row-liked {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#section-6 .row-liked ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+#section-6 .row-liked ul li {
+    font-family: 'twcen';
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: var(--fontcolor2);
+}
+
+#section-6 .row-liked h5 {
+    font-family: 'twcen';
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: left;
+    color: var(--fontcolor);
+}
+
+#section-2 p {
+    line-height: 150%;
+}
+
+section span {
+    font-family: 'manier_medium';
+    color: var(--fontcolor);
+    font-size: 1rem;
+    position: relative;
+    top: -10px;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-family: 'manier_medium';
+    color: var(--fontcolor2);
+}
+
+.col-md-12 {
+    font-family: "twcen";
+    color: var(--fontcolor2);
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+}

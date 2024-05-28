@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etka Güleç</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="/images/etka1.png" type="image/x-icon">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/9c05de7a9b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <i class="fa-solid fa-arrow-left" onclick="GoTo(0)"></i>
+
+
+    <header>
+        <a class="menu-item" onclick="GoTo(0)">
+            APPERANCE
+        </a>
+        <a class="menu-item" onclick="GoTo(-360)">
+            ABOUT ME
+        </a>
+        <a class="menu-item" onclick="GoTo(-1160)">
+            CODING
+        </a>
+        <a class="menu-item" onclick="GoTo(-2000)">
+            SKILLS
+        </a>
+        <a class="menu-item" onclick="GoTo(-2637.23)">
+            PROJECTS
+        </a>
+        <a class="menu-item" onclick="GoTo(-3100)">
+            HOBBIES
+        </a>
+
+        <script>
+            function GoTo(pos) {
+                $(".scroll-sections").css({ 'transform': 'translateX(' + pos + 'px)' });
+            }
+        </script>
+
+        <h1>Etkosko</h1>
+
+    </header>
+
+    <div class="scroll-sections">
+        <section id="section-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Chapter #1: My Appearance</h1>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="appearance"></div>
+                    <div class="appearance"></div>
+                    <div class="appearance"></div>
+                </div>
+
+            </div>
+        </section>
+        <script>
+            const appearances = document.querySelectorAll('.appearance');
+            const images = ['etka1.png', 'etka2.png', 'etka3.png', 'etka4.png', 'etka5.png', 'etka6.png', 'etka7.png', 'etka8.png', 'etka9.png', 'etka10.gif', 'etka11.jpg'];
+
+            function getRandomImage(exclude) {
+                let randomImage;
+                do {
+                    const randomIndex = Math.floor(Math.random() * images.length);
+                    randomImage = images[randomIndex];
+                } while (randomImage === exclude);
+                return randomImage;
+            }
+
+            function changeBackground(element, interval) {
+                let lastImage = '';
+                setInterval(() => {
+                    let randomImage;
+                    do {
+                        randomImage = getRandomImage(lastImage);
+                    } while (randomImage === element.style.backgroundImage);
+                    element.style.backgroundImage = `url(/images/${randomImage})`;
+                    lastImage = randomImage;
+                }, interval);
+            }
+
+            changeBackground(appearances[0], 2500); // 1. div her 2 saniyede
+            changeBackground(appearances[1], 4500); // 2. div her 4 saniyede
+            changeBackground(appearances[2], 3500); // 3. div her 3 saniyede
+        </script>
+        <section id="section-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Chapter #1: About Me</h1>
+                    </div>
+                </div>
+
+                <h1 class="myname">ETKA GÜLEÇ</h1>
+
+                <span>Web Back-End Developer</span>
+
+                <p>
+                    🃏 My name is Etka. My username is Etkosko. I was born on May 16, 2006. <br>
+                    I have 2 years of experience in web development and back-end software development. <br>
+                    I have knowledge in various programming languages. I really enjoy coding, <br>
+                    playing games, and listening to music on the computer. Additionally, I have knowledge <br>
+                    in video editing, Photoshop, and social media management. I'm generally <br>
+                    good at most games, I love making jokes, and I enjoy having fun. <br>
+                    Also I like to listen Şebnem Ferah :)
+                </p>
+
+            </div>
+        </section>
+        <section id="section-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Chapter #2: Coding Adventure</h1>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="coding">
+                        <div class="code-left">
+                            <div class="time">2019</div>
+                            <div class="time">2020</div>
+                        </div>
+
+
+                        <div class="infocoding">
+                            <h5>MTA Scripting</h5>
+                            <p>First time I started coding. learned the basics of coding.</p>
+                        </div>
+                    </div>
+
+                    <div class="line-vertical"></div>
+
+                    <div class="coding">
+                        <div class="code-left">
+                            <div class="time">2020</div>
+                            <div class="time">2020</div>
+                        </div>
+
+
+                        <div class="infocoding">
+                            <h5>Static Web Development</h5>
+                            <p>Learned HTML and CSS. Started to create static websites.</p>
+                        </div>
+                    </div>
+
+                    <div class="line-vertical"></div>
+
+                    <div class="coding">
+                        <div class="code-left">
+                            <div class="time">2023</div>
+                            <div class="time">2023</div>
+                        </div>
+
+
+                        <div class="infocoding">
+                            <h5>Learned Nodejs & Discord.js</h5>
+                            <p>Learned Database Management and started to create discord bots.</p>
+                        </div>
+                    </div>
+
+                    <div class="line-vertical"></div>
+
+                    <div class="coding">
+                        <div class="code-left">
+                            <div class="time">2023</div>
+                            <div class="time">2024</div>
+                        </div>
+
+
+                        <div class="infocoding">
+                            <h5>NodeJS & Express Websites </h5>
+                            <p>Learned how to create websites with NodeJS and Express. With more backend and useful
+                                features.</p>
+                        </div>
+                    </div>
+
+                    <div class="line-vertical"></div>
+
+                    <div class="coding">
+                        <div class="code-left">
+                            <div class="time">2024</div>
+                            <div class="time">2024</div>
+                        </div>
+
+
+                        <div class="infocoding">
+                            <h5>NextJS</h5>
+                            <p>A few months of learning ReactJS. Started to create websites with ReactJS.</p>
+                        </div>
+                    </div>
+
+                    <div class="line-vertical"></div>
+
+                    <div class="coding">
+                        <div class="code-left">
+                            <div class="time">2024</div>
+                            <div class="time">2024</div>
+                        </div>
+
+
+                        <div class="infocoding">
+                            <h5>Improved NodeJS & mySQL & Restful API</h5>
+                            <p>Learned how to create Restful API's and how to use them. Also learned how to use mySQL.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="section-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Chapter #3: My Skills</h1>
+                    </div>
+                </div>
+
+                <div class="column">
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>NodeJs & ExpressJS</h5>
+                            <p>I know basic Express Image uploads and use with Restful API's</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>NextJS & ReactJS</h5>
+                            <p>I know how to use NextJS and ReactJS a little bit</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>MongoDB</h5>
+                            <p>I know how to use MongoDB</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>mySQL</h5>
+                            <p>I know how to use mySQL</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>Restful API</h5>
+                            <p> I know how to create Restful API's and how to use them</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>Adobe After Effects</h5>
+                            <p>I know how to use Adobe After Effects</p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h5>Adobe Photoshop</h5>
+                            <p>I know how to use Adobe Photoshop</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="section-5">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class=".column2">
+                        <h1>MY PROJECTS</h1>
+                    </div>
+
+                    <a href="https://dmaturkey.com.tr" class="column2">
+                        <div class="project">
+                            <div class="img">
+                                <img src="/images/logo2_small.png" />
+                            </div>
+                            <div class="title">
+                                <h5>Bunnyhop</h5>
+                            </div>
+                            <div class="info">
+                                <p>As DMA Turkey, we sell DMA Cards, <br>
+                                    Kmbox, Fuser and Firmware to Turkey. <br>
+                                    Be uncaught in cheats.
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://bunnyhop.com.tr" class="column2">
+                        <div class="project">
+                            <div class="img">
+                                <img src="/images/bunnyohp.jpg" />
+                            </div>
+                            <div class="title">
+                                <h5>Bunnyhop</h5>
+                            </div>
+                            <div class="info">
+                                <p>Bunnyhop shows nearby events and <br>
+                                    allows you to create events. <br>
+                                    It is a website that I created with <br>
+
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://kombinator.com.tr" class="column2">
+                        <div class="project">
+                            <div class="img">
+                                <img src="/images/kombinator.jpg" />
+                            </div>
+                            <div class="title">
+                                <h5>Kombinator</h5>
+                            </div>
+                            <div class="info">
+                                <p>With Kombinator you can create <br>
+                                    your own custom combinations. <br>
+                                    also you can search for other <br>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="section-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Chapter #5: Life Information & Hobbies</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="https://www.instagram.com/etkosko" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                    <a href="https://github.com/etkosko" target="_blank"> <i class="fab fa-github"></i> </a>
+                    <a href="discord.com/channels/@me/345220061948280833" target="_blank"> <i
+                            class="fab fa-discord"></i> </a>
+                    <a href="https://steamcommunity.com/id/etkosko/" target="_blank"> <i class="fab fa-steam"></i> </a>
+                    <a href="mailto:mrlahmacuns@gmail.com"> <i class="fa-solid fa-envelope"></i> </a>
+                    <a href="https://open.spotify.com/user/poc4n5fwdaz3me9moxlj3yere?si=6f573558b9e74263"> <i
+                            class="fab fa-spotify"></i> </a>
+                </div>
+
+                <div class="row-liked">
+                    <h5>play games like</h5>
+                    <ul>
+                        <li>Counter-Strike: FACEIT: 10 Level, MM: 20K</li>
+                        <li>Valorant: Immortal</li>
+                        <li>Sea of Thieves</li>
+                        <li>Sims 4</li>
+                        <li>Roleplay </li>
+                        <li>Building </li>
+                        <li>Co-op </li>
+                    </ul>
+                </div>
+                <div class="row-liked">
+                    <h5>listen to music like</h5>
+                    <ul>
+                        <li>Rock</li>
+                        <li>Alternative Rock</li>
+                        <li>Turkish ALT POP</li>
+                        <li>Turkish Pop</li>
+                        <li>Pop</li>
+                        <li>Metal</li>
+                        <li>Anadolu Rock</li>
+                    </ul>
+                </div>
+                <div class="row-liked">
+                    <h5>watch series like</h5>
+                    <ul>
+                        <li>John Wick</li>
+                        <li>Pirates of the Caribbean</li>
+                        <li>Fast & Furious 1-6</li>
+                        <li>Romance</li>
+                        <li>Comedy</li>
+                        <li>Action</li>
+                        <li>(hate horror)</li>
+                    </ul>
+                </div>
+                <div class="row-liked">
+                    <h5>hobbies</h5>
+                    <ul>
+                        <li>stepping out of the ordinary</li>
+                        <li>behave like a child :) </li>
+                        <li>make jokes</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var pos = 0;
+            var lastElement = $(".scroll-sections").children().last();
+            var maxScroll = $(".scroll-sections").width() - (lastElement.offset().left + lastElement.outerWidth());
+
+            $(".scroll-sections").on('wheel', function (event) {
+                pos = pos + (event.originalEvent.wheelDelta / 3);
+                if (pos > 0) {
+                    pos = 0;
+                }
+                if (pos < maxScroll) {
+                    pos = maxScroll;
+                }
+                $(".scroll-sections").css({ 'transform': 'translateX(' + pos + 'px)' });
+                return false;
+            });
+
+        });   
+    </script>
+</body>
+
+</html>
