@@ -24,6 +24,8 @@
 :root {
     --fontcolor: #fff;
     --fontcolor2: #8F8F8F;
+
+
 }
 
 html,
@@ -42,6 +44,8 @@ section {
     overflow: visible;
     margin-right: 80px;
 }
+
+
 
 .fa-arrow-left {
     position: absolute;
@@ -95,6 +99,10 @@ section {
     background-image: url(/images/etka3.png);
     transition: 0.4s ease;
 
+}
+
+#section-5 h1 {
+    padding-left: 20px;
 }
 
 #section-5 .row:nth-child(2) {
@@ -413,7 +421,11 @@ header h1 {
     flex-direction: column;
 }
 
+
+
 #section-6 .row-liked ul li {
+    padding-left: 15px;
+
     font-family: 'twcen';
     font-size: 1rem;
     width: 100%;
