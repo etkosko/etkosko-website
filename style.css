@@ -183,6 +183,18 @@ header h1 {
 
 }
 
+#section-6 h4 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: white;
+    text-align: center;
+    font-family: 'twcen';
+    text-decoration: none;
+    font-size: 3.5rem;
+    width: 100%;
+    margin-left: 530px;
+}
+
 .myname {
     font-family: 'Arvo', serif;
     color: var(--fontcolor);
